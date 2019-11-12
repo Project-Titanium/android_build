@@ -143,12 +143,12 @@ function check_product()
         return
     fi
 
-    if (echo -n $1 | grep -q -e "^du_") ; then
-       DU_BUILD=$(echo -n $1 | sed -e 's/^du_//g')
+    if (echo -n $1 | grep -q -e "^titanium_") ; then
+       TITANIUM_BUILD=$(echo -n $1 | sed -e 's/^titanium_//g')
     else
-       DU_BUILD=
+       TITANIUM_BUILD=
     fi
-    export DU_BUILD
+    export TITANIUM_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
